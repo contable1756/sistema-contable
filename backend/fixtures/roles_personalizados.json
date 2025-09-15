@@ -1,0 +1,26 @@
+[
+  {
+    "model": "usuarios.rol",
+    "pk": 1,
+    "fields": {
+      "codigo": "admin",
+      "nombre": "Administrador"
+    }
+  },
+  {
+    "model": "usuarios.rol",
+    "pk": 2,
+    "fields": {
+      "codigo": "contador",
+      "nombre": "Contador"
+    }
+  },
+  {
+    "model": "usuarios.rol",
+    "pk": 3,
+    "fields": {
+      "codigo": "auditor",
+      "nombre": "Auditor"
+    }
+  }
+]

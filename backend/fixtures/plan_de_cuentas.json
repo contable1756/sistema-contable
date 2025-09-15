@@ -1,0 +1,872 @@
+[
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 1,
+    "fields": {
+      "codigo": "1",
+      "nombre": "ACTIVO",
+      "tipo": "activo",
+      "nivel": 1
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 2,
+    "fields": {
+      "codigo": "11",
+      "nombre": "ACTIVO CIRCULANTE",
+      "tipo": "activo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 3,
+    "fields": {
+      "codigo": "111",
+      "nombre": "DISPONIBLE",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 4,
+    "fields": {
+      "codigo": "1111",
+      "nombre": "EFECTIVO",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 5,
+    "fields": {
+      "codigo": "1112",
+      "nombre": "BANCOS NACIONALES",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 6,
+    "fields": {
+      "codigo": "1113",
+      "nombre": "BANCOS EN EL EXTERIOR",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 7,
+    "fields": {
+      "codigo": "112",
+      "nombre": "REALIZABLE",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 8,
+    "fields": {
+      "codigo": "1121",
+      "nombre": "EFECTOS POR COBRAR",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 9,
+    "fields": {
+      "codigo": "1122",
+      "nombre": "CUENTAS POR COBRAR CLIENTES",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 10,
+    "fields": {
+      "codigo": "1123",
+      "nombre": "OTRAS CUENTAS POR COBRAR",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 11,
+    "fields": {
+      "codigo": "1124",
+      "nombre": "INVENTARIOS",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 12,
+    "fields": {
+      "codigo": "113",
+      "nombre": "PREPAGADOS",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 13,
+    "fields": {
+      "codigo": "1131",
+      "nombre": "GASTOS PAGADOS POR ANTICIPADO",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 14,
+    "fields": {
+      "codigo": "1133",
+      "nombre": "ANTICIPOS PAGADOS",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 15,
+    "fields": {
+      "codigo": "1134",
+      "nombre": "INVERSIONES",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 16,
+    "fields": {
+      "codigo": "12",
+      "nombre": "ACTIVO FIJO",
+      "tipo": "activo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 17,
+    "fields": {
+      "codigo": "1210",
+      "nombre": "TERRENOS",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 18,
+    "fields": {
+      "codigo": "1220",
+      "nombre": "EDIFICIOS",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 19,
+    "fields": {
+      "codigo": "1221",
+      "nombre": "-DEPREC. ACUM. EDIFICIOS",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 20,
+    "fields": {
+      "codigo": "1222",
+      "nombre": "LOCALES COMERCIALES",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 21,
+    "fields": {
+      "codigo": "1223",
+      "nombre": "-DEPREC. ACUM. LOCALES COMERCIALES",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 22,
+    "fields": {
+      "codigo": "1224",
+      "nombre": "GALPONES",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 23,
+    "fields": {
+      "codigo": "1225",
+      "nombre": "-DEPREC. ACUM. GALPONES",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 24,
+    "fields": {
+      "codigo": "1240",
+      "nombre": "MAQUINARIAS",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 25,
+    "fields": {
+      "codigo": "1241",
+      "nombre": "-DEPREC. ACUM. MAQUINARIA",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 26,
+    "fields": {
+      "codigo": "1250",
+      "nombre": "INSTALACIONES",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 27,
+    "fields": {
+      "codigo": "1251",
+      "nombre": "-DEPREC. ACUM. INST. DEL INMUEBLE",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 28,
+    "fields": {
+      "codigo": "1260",
+      "nombre": "MOBILIARIOS Y EQUIPOS DE OFICINA",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 29,
+    "fields": {
+      "codigo": "1261",
+      "nombre": "-DEPREC. ACUM. MOBILIARIOS y EQ.DE OFIC.",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 30,
+    "fields": {
+      "codigo": "1270",
+      "nombre": "VEHICULOS DE REPARTO",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 31,
+    "fields": {
+      "codigo": "1271",
+      "nombre": "-DEPREC. ACUM. VEHICULOS DE REPARTO",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 32,
+    "fields": {
+      "codigo": "1272",
+      "nombre": "VEHICULOS DE OFICINA",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 33,
+    "fields": {
+      "codigo": "1273",
+      "nombre": "-DEPREC. ACUM. VEHICULOS DE OFICINA",
+      "tipo": "activo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 34,
+    "fields": {
+      "codigo": "13",
+      "nombre": "CARGOS DIFERIDOS",
+      "tipo": "activo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 35,
+    "fields": {
+      "codigo": "1310",
+      "nombre": "PROYECTOS EN PROCESO",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 36,
+    "fields": {
+      "codigo": "14",
+      "nombre": "OTROS ACTIVOS",
+      "tipo": "activo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 37,
+    "fields": {
+      "codigo": "1410",
+      "nombre": "DEPOSITOS ENTREGADOS EN GARANTIA",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 38,
+    "fields": {
+      "codigo": "1420",
+      "nombre": "INTANGIBLES",
+      "tipo": "activo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 39,
+    "fields": {
+      "codigo": "2",
+      "nombre": "PASIVO",
+      "tipo": "pasivo",
+      "nivel": 1
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 40,
+    "fields": {
+      "codigo": "21",
+      "nombre": "PASIVO CIRCULANTE",
+      "tipo": "pasivo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 41,
+    "fields": {
+      "codigo": "211",
+      "nombre": "EFECTOS POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 42,
+    "fields": {
+      "codigo": "2110",
+      "nombre": "EXP MERCANTILES",
+      "tipo": "pasivo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 43,
+    "fields": {
+      "codigo": "212",
+      "nombre": "CUENTAS POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 44,
+    "fields": {
+      "codigo": "2120",
+      "nombre": "CUENTAS POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 45,
+    "fields": {
+      "codigo": "215",
+      "nombre": "OTRAS CUENTAS POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 46,
+    "fields": {
+      "codigo": "2150",
+      "nombre": "OTRAS CUENTAS POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 4
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 47,
+    "fields": {
+      "codigo": "22",
+      "nombre": "RETENCIONES Y APORTES POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 48,
+    "fields": {
+      "codigo": "2210",
+      "nombre": "RETENCIONES POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 49,
+    "fields": {
+      "codigo": "2220",
+      "nombre": "APORTES POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 50,
+    "fields": {
+      "codigo": "2230",
+      "nombre": "REMUNERACIONES POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 51,
+    "fields": {
+      "codigo": "2240",
+      "nombre": "GASTOS ACUMULADOS POR PAGAR",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 52,
+    "fields": {
+      "codigo": "24",
+      "nombre": "LARGO PLAZO",
+      "tipo": "pasivo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 53,
+    "fields": {
+      "codigo": "2410",
+      "nombre": "HIPOTECAS",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 54,
+    "fields": {
+      "codigo": "25",
+      "nombre": "CONTINGENTE",
+      "tipo": "pasivo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 55,
+    "fields": {
+      "codigo": "2510",
+      "nombre": "APARTADOS PRESTACIONES SOCIALES",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 56,
+    "fields": {
+      "codigo": "26",
+      "nombre": "DIFERIDO",
+      "tipo": "pasivo",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 57,
+    "fields": {
+      "codigo": "2610",
+      "nombre": "CREDITOS DIFERIDOS",
+      "tipo": "pasivo",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 58,
+    "fields": {
+      "codigo": "3",
+      "nombre": "CUENTAS DE PATRIMONIO",
+      "tipo": "patrimonio",
+      "nivel": 1
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 59,
+    "fields": {
+      "codigo": "31",
+      "nombre": "CAPITAL",
+      "tipo": "patrimonio",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 60,
+    "fields": {
+      "codigo": "3110",
+      "nombre": "CAPITAL SOCIAL",
+      "tipo": "patrimonio",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 61,
+    "fields": {
+      "codigo": "3120",
+      "nombre": "ACTUALIZACION DE CAPITAL",
+      "tipo": "patrimonio",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 62,
+    "fields": {
+      "codigo": "32",
+      "nombre": "RESERVAS",
+      "tipo": "patrimonio",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 63,
+    "fields": {
+      "codigo": "3210",
+      "nombre": "RESERVAS",
+      "tipo": "patrimonio",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 64,
+    "fields": {
+      "codigo": "33",
+      "nombre": "SUPERAVIT",
+      "tipo": "patrimonio",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 65,
+    "fields": {
+      "codigo": "3310",
+      "nombre": "UTILIDADES NO DISTRIBUIDAS",
+      "tipo": "patrimonio",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 66,
+    "fields": {
+      "codigo": "35",
+      "nombre": "CUENTAS DE RESULTADO",
+      "tipo": "patrimonio",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 67,
+    "fields": {
+      "codigo": "3510",
+      "nombre": "RESULTADO DEL EJERCICIO",
+      "tipo": "patrimonio",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 68,
+    "fields": {
+      "codigo": "4",
+      "nombre": "INGRESOS",
+      "tipo": "ingreso",
+      "nivel": 1
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 69,
+    "fields": {
+      "codigo": "41",
+      "nombre": "INGRESOS",
+      "tipo": "ingreso",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 70,
+    "fields": {
+      "codigo": "4110",
+      "nombre": "INGRESOS POR SERVICIOS",
+      "tipo": "ingreso",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 71,
+    "fields": {
+      "codigo": "4120",
+      "nombre": "DESCUENTOS Y DEVOLUCIONES EN VENTAS",
+      "tipo": "ingreso",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 72,
+    "fields": {
+      "codigo": "43",
+      "nombre": "OTROS INGRESOS",
+      "tipo": "ingreso",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 73,
+    "fields": {
+      "codigo": "4320",
+      "nombre": "INTERESES GANADOS",
+      "tipo": "ingreso",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 74,
+    "fields": {
+      "codigo": "4330",
+      "nombre": "INGRESOS POR DIVIDENDOS",
+      "tipo": "ingreso",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 75,
+    "fields": {
+      "codigo": "4340",
+      "nombre": "REGALIAS",
+      "tipo": "ingreso",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 76,
+    "fields": {
+      "codigo": "5",
+      "nombre": "COSTOS",
+      "tipo": "gasto",
+      "nivel": 1
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 77,
+    "fields": {
+      "codigo": "51",
+      "nombre": "COSTO DE VENTAS",
+      "tipo": "gasto",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 78,
+    "fields": {
+      "codigo": "5110",
+      "nombre": "INVENTARIO INICIAL DE MERCANCIAS",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 79,
+    "fields": {
+      "codigo": "5120",
+      "nombre": "COMPRAS NETAS NACIONALES",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 80,
+    "fields": {
+      "codigo": "5130",
+      "nombre": "COMPRAS NETAS EN EL EXTERIOR",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 81,
+    "fields": {
+      "codigo": "5190",
+      "nombre": "INVENTARIO FINAL DE MERCANCIAS",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 82,
+    "fields": {
+      "codigo": "6",
+      "nombre": "GASTOS",
+      "tipo": "gasto",
+      "nivel": 1
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 83,
+    "fields": {
+      "codigo": "61",
+      "nombre": "GASTOS ADMINISTRATIVOS",
+      "tipo": "gasto",
+      "nivel": 2
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 84,
+    "fields": {
+      "codigo": "6101",
+      "nombre": "REMUNERACIONES",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 85,
+    "fields": {
+      "codigo": "6120",
+      "nombre": "GASTOS DE OFICINA Y VENTAS",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 86,
+    "fields": {
+      "codigo": "6121",
+      "nombre": "GASTOS DEPRECIACION",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  },
+  {
+    "model": "contabilidad.cuentacontable",
+    "pk": 87,
+    "fields": {
+      "codigo": "6122",
+      "nombre": "GASTOS BANCARIOS Y FINANCIEROS",
+      "tipo": "gasto",
+      "nivel": 3
+    }
+  }
+]

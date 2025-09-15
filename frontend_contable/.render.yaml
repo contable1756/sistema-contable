@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sistema-contable-frontend
+    env: static-site
+    region: oregon
+    plan: free
+    buildCommand: "npm run build"
+    publishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://sistema-contable-backend.onrender.com/api
