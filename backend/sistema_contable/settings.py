@@ -138,6 +138,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.1.111:3000",
     "http://192.168.6.104:3000",
     "http://192.168.6.104:5173",
+    "https://sistema-contable-frontend.vercel.app",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
