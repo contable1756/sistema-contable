@@ -1,4 +1,3 @@
-// src/pages/Dashboard.tsx
 import React, { useState, useEffect } from 'react';
 import {
   Box,
@@ -14,7 +13,8 @@ import {
 import { BarChart } from '@mui/x-charts/BarChart';
 import apiClient from '../services/apiClient.ts';
 
-interface BalanceData {
+// Tipos para tipado seguro
+interface BalanceGeneralData {
   total_activo: number;
   total_pasivo: number;
   total_patrimonio: number;
@@ -42,36 +42,51 @@ const Dashboard = () => {
       try {
         setError(null);
 
-        // Cargar cuentas
-        const resCuentas = await apiClient.get('/contabilidad/cuentas/');
+        // Cargar todos los datos en paralelo para mayor eficiencia
+        const [
+          resCuentas,
+          resAsientos,
+          resEstadoResultados,
+          resBalanceGeneral,
+        ] = await Promise.all([
+          apiClient.get('/contabilidad/cuentas/'),
+          apiClient.get('/contabilidad/asientos/'),
+          apiClient.get('/contabilidad/reportes/estado-resultados/'),
+          apiClient.get('/contabilidad/reportes/balance-general/'),
+        ]);
+
+        // Procesar cuentas
         const cuentasCount = Array.isArray(resCuentas.data)
           ? resCuentas.data.length
           : resCuentas.data.count || 0;
         setTotalCuentas(cuentasCount);
 
-        // Cargar asientos
-        const resAsientos = await apiClient.get('/contabilidad/asientos/');
+        // Procesar asientos
         const asientosCount = Array.isArray(resAsientos.data)
           ? resAsientos.data.length
           : resAsientos.data.count || 0;
         setTotalAsientos(asientosCount);
 
-        // Cargar estado de resultados
-        const resResultados = await apiClient.get('/contabilidad/reportes/estado-resultados/');
-        setUtilidadNeta(resResultados.data.utilidad_neta || 0);
+        // Utilidad neta
+        setUtilidadNeta(resEstadoResultados.data.utilidad_neta || 0);
 
-        // Cargar balance general
-        const resBalance = await apiClient.get('/contabilidad/reportes/balance-general/');
-        setTotalActivo(resBalance.data.total_activo || 0);
-        setTotalPasivo(resBalance.data.total_pasivo || 0);
+        // Balance general
+        const balanceData = resBalanceGeneral.data;
+        setTotalActivo(balanceData.total_activo || 0);
+        setTotalPasivo(balanceData.total_pasivo || 0);
 
       } catch (err: any) {
         console.error('Error al cargar datos del dashboard:', err);
-        setError(
-          err.response?.status === 404
-            ? 'No se encontró el recurso. Verifica que los endpoints estén bien definidos.'
-            : 'No se pudieron cargar los datos del dashboard. Revisa el backend.'
-        );
+
+        if (err.response?.status === 404) {
+          setError('Recurso no encontrado. Verifica que los endpoints estén bien definidos.');
+        } else if (err.response?.status === 500) {
+          setError('Error interno del servidor. Revisa el backend.');
+        } else if (err.request) {
+          setError('No se pudo conectar con el servidor. ¿Está el backend en línea?');
+        } else {
+          setError('Ocurrió un error inesperado.');
+        }
       } finally {
         setLoading(false);
       }
@@ -84,6 +99,9 @@ const Dashboard = () => {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
         <CircularProgress />
+        <Typography variant="body1" sx={{ ml: 2 }}>
+          Cargando información contable...
+        </Typography>
       </Box>
     );
   }
@@ -125,9 +143,13 @@ const Dashboard = () => {
             <CardHeader title="Utilidad Neta" />
             <CardContent>
               <Typography variant="h5" color="success.main">
-                {utilidadNeta.toLocaleString('es-VE', { style: 'currency', currency: 'USD' })}
+                {utilidadNeta.toLocaleString('es-VE', {
+                  style: 'currency',
+                  currency: 'USD',
+                  minimumFractionDigits: 2,
+                })}
               </Typography>
-              <Typography color="textSecondary">Estado de resultados</Typography>
+              <Typography color="textSecondary">Resultado del ejercicio</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -139,7 +161,7 @@ const Dashboard = () => {
           📈 Activo vs Pasivo
         </Typography>
 
-        {(totalActivo === 0 && totalPasivo === 0) ? (
+        {totalActivo === 0 && totalPasivo === 0 ? (
           <Typography color="textSecondary" sx={{ py: 4, textAlign: 'center' }}>
             No hay datos suficientes para mostrar el gráfico.
           </Typography>

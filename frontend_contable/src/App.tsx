@@ -4,7 +4,7 @@ import Login from './pages/Login.tsx';
 import DashboardLayout from './components/layout/DashboardLayout.tsx';
 import Dashboard from './pages/Dashboard.tsx';
 import ListaCuentas from './pages/Cuentas/ListaCuentas.tsx';
-import ListaAsientos from './pages/Asientos/ListaAsientos.tsx'
+import ListaAsientos from './pages/Asientos/ListaAsientos.tsx';
 import FormCuentaContable from './components/Cuentas/FormCuentaContable.tsx';
 import FormAsientoContable from './components/Asientos/FormAsientoContable.tsx';
 import BalanceComprobacion from './pages/Reportes/BalanceComprobacion.tsx';
@@ -14,27 +14,34 @@ import ListaCompras from './pages/Compras/ListaCompras.tsx';
 import LibroCompras from './pages/Compras/LibroCompras.tsx';
 import ListaVentas from './pages/Ventas/ListaVentas.tsx';
 import LibroVentas from './pages/Ventas/LibroVentas.tsx';
-import EstadoResultados from './pages/EstadoResultados.tsx'
+import EstadoResultados from './pages/EstadoResultados.tsx';
 import { useAuth } from './context/AuthContext.tsx';
 import { useEffect, useState } from 'react';
 
-// Ruta protegida
+// Ruta protegida con manejo de carga
 const PrivateRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
   const { isAuthenticated } = useAuth();
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
+    // Simula una verificación rápida del estado de autenticación
     setChecked(true);
   }, [isAuthenticated]);
 
-  if (!checked) return null;
+  if (!checked) {
+    return null; // O un spinner si prefieres
+  }
+
   return isAuthenticated ? children : <Login />;
 };
 
 function App() {
   return (
     <Routes>
+      {/* Página pública */}
       <Route path="/login" element={<Login />} />
+
+      {/* Rutas protegidas dentro del layout */}
       <Route
         path="/dashboard"
         element={
@@ -115,11 +122,56 @@ function App() {
           </PrivateRoute>
         }
       />
-      <Route path="/compras" element={<DashboardLayout><ListaCompras /></DashboardLayout>} />
-      <Route path="/compras/libro" element={<DashboardLayout><LibroCompras /></DashboardLayout>} />
-      <Route path="/ventas" element={<DashboardLayout><ListaVentas /></DashboardLayout>} />
-      <Route path="/ventas/libro" element={<DashboardLayout><LibroVentas /></DashboardLayout>} />
-      <Route path="/reportes/resultados" element={<EstadoResultados />} />
+      <Route
+        path="/compras"
+        element={
+          <PrivateRoute>
+            <DashboardLayout>
+              <ListaCompras />
+            </DashboardLayout>
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/compras/libro"
+        element={
+          <PrivateRoute>
+            <DashboardLayout>
+              <LibroCompras />
+            </DashboardLayout>
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/ventas"
+        element={
+          <PrivateRoute>
+            <DashboardLayout>
+              <ListaVentas />
+            </DashboardLayout>
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/ventas/libro"
+        element={
+          <PrivateRoute>
+            <DashboardLayout>
+              <LibroVentas />
+            </DashboardLayout>
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/reportes/resultados"
+        element={
+          <PrivateRoute>
+            <DashboardLayout>
+              <EstadoResultados />
+            </DashboardLayout>
+          </PrivateRoute>
+        }
+      />
     </Routes>
   );
 }

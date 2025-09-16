@@ -8,12 +8,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security
 SECRET_KEY = config('SECRET_KEY', default='tu-clave-secreta-aqui')
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)  # 👉 Cambia a False en producción
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '0.0.0.0',
+    'sistema-contable-rxm3.onrender.com',  # ✅ Añade tu dominio de Render
 ]
 
 # Application definition
@@ -24,16 +25,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Tus apps
     'contabilidad',
     'usuarios',
     'compras',
     'ventas',
+
+    # Terceros
     'rest_framework',
     'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # ✅ Al inicio
+    'corsheaders.middleware.CorsMiddleware',  # ✅ Siempre al inicio
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,7 +58,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.template.context_processors.request',  # ✅ Necesario para algunos componentes
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -117,9 +122,11 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,
+    # ✅ Permite acceso público a ciertos endpoints (como login)
+    'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
 }
 
-# Simple JWT
+# Simple JWT Settings
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -127,27 +134,34 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
     'ALGORITHM': 'HS256',
     'SIGNING_KEY': SECRET_KEY,
+    'VERIFYING_KEY': None,
     'AUTH_HEADER_TYPES': ('Bearer',),
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+    'TOKEN_TYPE_CLAIM': 'token_type',
+    'JTI_CLAIM': 'jti',
 }
 
-# CORS
+# CORS Settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://192.168.1.111:3000",
     "http://192.168.6.104:3000",
     "http://192.168.6.104:5173",
-    "https://sistema-contable-dusky.vercel.app",
+    "https://sistema-contable-dusky.vercel.app",  # ✅ Sin espacios
 ]
+
 CORS_ALLOW_CREDENTIALS = True
+
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://192.168.1.111:3000",
     "http://192.168.6.104:3000",
     "http://192.168.6.104:5173",
-    "https://sistema-contable-dusky.vercel.app",
+    "https://sistema-contable-dusky.vercel.app",  # ✅ Sin espacios
 ]
+
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',
