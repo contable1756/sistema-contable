@@ -9,3 +9,7 @@ services:
     envVars:
       - key: REACT_APP_API_URL
         value: https://sistema-contable-backend.onrender.com/api
+        baseURL: 'https://sistema-contable-rxm3.onrender.com/api/',
+        
+        #baseURL: 'https://sistema-contable-rxm3.onrender.com/api/',
+        #https://sistema-contable-backend.onrender.com/api

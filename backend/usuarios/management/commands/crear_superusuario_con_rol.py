@@ -14,7 +14,7 @@ class Command(BaseCommand):
         correo = 'admin@contable.com'
         nombre = 'Admin'
         apellido = 'Sistema'
-        password = '123456'
+        password = 'admin123*'
 
         # === 2. Crear roles si no existen ===
         roles_data = [
